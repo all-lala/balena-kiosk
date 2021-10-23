@@ -1,0 +1,17 @@
+name: "Kiosk Web Browser"
+type: "sw.application"
+description: "Display a kiosk web browser on, RPi3."
+data:
+  applicationConfigVariables:
+    - BALENA_HOST_CONFIG_gpu_mem: 128
+  applicationEnvironmentVariables:
+    - LAUNCH_URL: 'https://duckduckgo.com/'
+    - KIOSK: '1'
+    - PERSISTENT: '1'
+    - ENABLE_GPU: '1'
+    - API_PORT: '5011'
+    - REMOTE_DEBUG_PORT: '35173'
+    - SHOW_CURSOR: '0'
+  defaultDeviceType: "raspberrypi3"
+  supportedDeviceTypes:
+    - "raspberrypi3"

@@ -1,0 +1,14 @@
+version: "2.1"
+volumes:
+  settings:
+services:
+  kiosk:
+    image: balenablocks/browser
+    build: ./kiosk
+    privileged: true
+    network_mode: host
+    environment:
+      LAUNCH_URL: "https://duckduckgo.com/"
+      KIOSK: "1"
+    volumes:
+      - "settings:/data"
